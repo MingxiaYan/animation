@@ -1,8 +1,83 @@
 /* 该文件为网站样式文件 */
 /* 所有的css和js都会直接附录到对应的样式下方 */
 /* 这部分无需复制 */
-
+h5{
+    font-weight: bolder;
+}
+small{
+    font-size: 12px;
+    display: inline-block;
+    transform: scale(0.8,.8);
+    font-weight: bolder;
+}
 .f-type{
     width: 100%;
+    background: #FDFDFD;
     min-height: 50px;
+    box-shadow: 8px 10px 0 #ffb14ca4;
+    border: 1px solid #eeeeee;
+    padding: 20px 15px;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
 }
+.f-type::after{
+    content: "YiMin";
+    position: absolute;
+    width: 80%;
+    bottom: -45px;
+    right: -70px;
+    z-index: -1;
+    font-size: 73px;
+    font-weight: 900;
+    color: #fdc67d55;
+}
+.title-style1{
+    position: relative;
+    font-weight: bolder;
+    padding-left: 10px;
+    z-index: 2;
+}
+.title-style1::after{
+    content: "";
+    position: absolute;
+    border-bottom: 12px solid #fdc67d;
+    width: 80%;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+.f-type textarea{
+    width: 100%;
+    border: none;
+    background: transparent;
+    line-height: 20px;
+    font-size: 14px;
+    color: #333;
+    letter-spacing: 2px;
+}
+.f-type .text-style{
+    position: relative;
+    z-index: 2;
+}
+.f-type .text-style::after{
+    content: "";
+    position: absolute;
+    background: #fdc67d;
+    width: 10px;
+    height: 10px;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+.f-type .img-content{
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    text-align: center;
+}
+.f-type img{
+    width: 90%;
+}
+
+img {}
