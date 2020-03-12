@@ -4,6 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css" >
         <link rel="stylesheet" href="../css/site.css" >
+        <script src="../lib/jquery/jquery.min.js"></script>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -40,19 +41,19 @@
                           <div class="img-content mt-4 mb-3">
                               <img src="../images/demo.jpg" alt="../images/demo.jpg">
                           </div>
-                          <textarea placeholder="在这里输入想要输入的文字">
+                          <textarea class="text-area" placeholder="在这里输入想要输入的文字" onchange=autoHeight()>
 思慕雪是由单词Smoothie音译而来，它通常是由新鲜或冷冻的水果、蔬菜、牛奶、酸奶、豆奶、碎冰等食材搅打至顺滑糊状的半流质的饮品。
                           </textarea>
                           
                           <h5 class="mt-3"><span class="title-style1">食材：</span></h5>
                           <div class="text-style">
-                              <textarea placeholder="在这里输入想要输入的文字">
+                              <textarea class="text-area" placeholder="在这里输入想要输入的文字" onchange=autoHeight()>
 牛油果1个 冻香蕉1根 酸奶200克 抹茶粉1克 小黄瓜半根 龙眼3颗 蓝莓9粒 坚果谷物燕麦片适量
                               </textarea>
                           </div>
                           
-                          <h5><span class="title-style1">做法步骤：</span></h5>
-                          <textarea placeholder="在这里输入想要输入的文字">
+                          <h5 class="mt-3"><span class="title-style1">做法步骤：</span></h5>
+                          <textarea class="text-area" placeholder="在这里输入想要输入的文字" onchange=autoHeight()>
 1、把冻香蕉去皮切块，放入搅拌杯中。
 2、牛油果对半切开。
 3、切块放入搅拌杯里。
@@ -71,5 +72,16 @@
             </div>
         </div>
 
+        <script>
+            $(document).ready(function(){
+                autoHeight();
+            })
+            function autoHeight(){
+                $(".text-area").each(i => {
+                    var _height = $(".text-area")[i].scrollHeight;
+                    $(".text-area").eq(i).css({"height":_height});
+                });
+            }
+        </script>
     </body>
 </html>
