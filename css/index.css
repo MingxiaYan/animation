@@ -1,0 +1,179 @@
+body{
+    background: rgb(0, 34, 44);
+}
+
+.container{
+    min-width: 300px;
+}
+.draw-one{
+    width: 100%;
+    min-height: 100px;
+    background: rgb(132, 0, 255);
+    color: #FFFFFF;
+    text-align: right;
+}
+.smile-row,
+.smile-col{
+    padding: 0;
+    font-size: 0px;
+}
+.smile-row{
+    display: inline-block;
+}
+.smile-row li{
+    display: block;
+}
+.smile-col li{
+    display: inline-block;
+    background: rgb(255, 217, 0);
+    width: 10px;
+    height: 10px;
+}
+
+/* Mountain draw */
+.draw-two{
+    position: relative;
+    background: rgb(152, 220, 253);
+}
+.pic{
+    position: relative;
+}
+
+.tree{
+    min-height: 100px;
+    padding-top: 50px;
+}
+.tree div{
+    position: absolute;
+}
+
+.tree .leaf {
+    position: relative;
+    display: inline-block;
+    height: 125px;
+    width: 50px;
+    z-index: 20;
+}
+.leaf::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 4px;
+    background: rgb(139, 96, 1);
+    left: calc(60% - 1.5px);
+}
+.leaf span{
+    position: absolute;
+    width: 100%;
+    height: 40%;
+    background:linear-gradient(90deg, #bdeb3f 50%, #97ce00 50%);
+    border-radius: 50%;
+    left: 10%;
+    z-index: 5;
+}
+.leaf .two{
+    width: 40%;
+    height: 16%;
+    background:linear-gradient(90deg, #d4f18e 50%, #c6e769 50%);
+    z-index: 10;
+    top: 40%;  
+    left: 0;
+}
+.leaf .two::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background: rgb(139, 96, 1);
+    left: 22px;
+    top: 15px;
+    z-index: -89;
+    transform: rotateZ(-45deg);
+}
+.leaf .three{
+    width: 60%;
+    height: 24%;
+    background:linear-gradient(90deg, #e2ff91 50%, #cff073 50%);
+    top: 30%;  
+    left: 70%;
+    z-index: 20;
+}
+.leaf .three::after{
+    content: "";
+    position: absolute;
+    height: 50%;
+    width: 3px;
+    background: rgb(139, 96, 1);
+    left: 0px;
+    top: 25px;
+    z-index: -89;
+    transform: rotate(45deg);
+}
+.moon{
+    position: absolute;
+    background: rgb(255, 250, 177);
+    border-radius: 100px;
+    width: 80px;
+    height: 80px;
+    z-index: 2;
+    top: 30px;
+    left: 10%;
+}
+.mountain{
+    position: relative;
+    background: #FFFFFF;
+    width: 150px;
+    height: 100px;
+    border-radius: 10px 10px 10px 10px; 
+}
+.mountain div{
+    position: absolute;
+}
+.mount-left{}
+.mount-right{}
+.mount-snow{}
+
+.horizon{
+    position: absolute;
+    width: 50%;
+    height: 5px;
+    background: rgb(15, 71, 106);
+    top: 146px;
+    z-index: 100;
+    left: 10px;
+    border-radius: 10px;
+}
+
+body .black{
+    background: black;
+}
+body .purple{
+    background: rgb(132, 0, 255);
+}
+body .trans{
+    background: transparent;
+}
+body .scale-xs{
+    transform: scale(.3);
+}
+body .scale-s{
+    transform: scale(.4);
+}
+body .scale-m{
+    transform: scale(.6);
+}
+.mr-minus-1{
+    margin-left: -10px;
+}
+.mr-minus-2{
+    margin-left: -20px;
+}
+.mr-minus-3{
+    margin-left: -30px;
+}
+.mr-minus-4{
+    margin-left: -40px;
+}
+.mr-minus-5{
+    margin-left: -50px;
+}
