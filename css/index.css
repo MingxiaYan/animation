@@ -136,6 +136,7 @@ body{
 .house{
     font-size: 0;
     position: absolute;
+    z-index: 2;
     width: 150px;
     min-height: 100px;
     border-radius: 10px 10px 10px 10px;
@@ -190,14 +191,14 @@ body{
     border-bottom: 3px solid rgb(216, 212, 170);
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.247);
 }
-.floor .window{
+.window{
     display: inline-block;
     height: 25px;
     width: 18px;
-    background: linear-gradient(90deg,#115e91 50%,#074168 50%);
+    background: linear-gradient(90deg,#1f79a3 50%,#074168 50%);
     margin-left: 17px;
     margin-top: 8px;
-    box-shadow: inset 1px -1px 3px rgba(255, 255, 255, 0.377), inset 1px -0.5px 1px rgba(255, 255, 255, 0.7), inset -2px 0.5px 1px rgba(0, 0, 0, .6);
+    box-shadow: inset 1px -2px 3px rgba(255, 255, 255, 1), inset 1px -0.5px 1px rgba(255, 255, 255, 0.7), inset -2px 0.5px 1px rgba(0, 0, 0, .6);
 }
 .floor.first{
     height: 55px;
@@ -245,6 +246,124 @@ body{
     linear-gradient(#fff,#c7c3bd);
 }
 
+.kite{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 260px;
+    animation: kite-ani 10s infinite forwards;
+}
+@keyframes kite-ani{
+    50%{transform: translateX(15px);}
+    80%{transform: translateX(23px);}
+}
+.kite::before{
+    content: " ";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(-225deg,#FFF 20%,#e76652 20%,#d85743 40%,#FFF 40%, #FFF 65%,#d85743 65%,#d85743 80% );
+    transform: rotate3d(1, 1, 0, 45deg);
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.473);
+}
+.kite::after{
+    content: " ";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 30px;
+    left: 31px;
+    background: #ffffff;
+    transform: rotate3d(1, 1, 0, 60deg);
+}
+.line{
+    margin-left: 20px;
+    width: 120px;
+    height: 120px;
+    border-radius: 0 0 0 120px;
+    box-shadow: -0.5px 1px 0 #e76652;
+    margin-top: 6px;
+}
+
+.clouds{
+    position: absolute;
+    width: 50%;
+    min-width: 500px;
+    min-height: 200px;
+    margin-top: 20px;
+    overflow: hidden;
+    top: 0;
+}
+.clouds .cloud{
+    display: inline-block;
+    background: #ffffff;
+    width: 39px;
+    height: 12px;
+    border-radius: 18px 23px 8px 7px;
+    top: 0;
+    margin-left: 30px;
+    vertical-align: middle;
+}
+.cloud::before{
+    content: "";
+    display: block;
+    width: 19px;
+    height: 17px;
+    background: #FFF;
+    margin-top: -9px;
+    position: absolute;
+    border-radius: 30px;
+    margin-left: 9px;
+}
+.cloud::after{
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #FFF;
+    margin-top: -5px;
+    position: absolute;
+    border-radius: 30px;
+    margin-left: 26px;
+}
+.cloud.two{
+    height: 10px;
+    width: 39px;
+    border-radius: 18px 28px 20px 29px;
+    top: 0;
+    margin-left: 30px;
+}
+.cloud.two::before{
+    width: 20px;
+    height: 22px;
+    border-radius: 13px 20px 10px 9px;
+    margin-left: 13px;
+}
+.cloud.two::after{
+    margin-top: -4px;
+    margin-left: 4px;
+}
+.cloud.three{
+    height: 10px;
+    width: 34px;
+    border-radius: 21px 12px 25px 13px;
+    top: 0;
+    margin-left: 30px;
+}
+.cloud.three::before{
+    width: 17px;
+    height: 21px;
+    border-radius: 20px 10px 16px 12px;
+    margin-left: 8px;
+    margin-top: -8px;
+}
+.cloud.three::after{
+    margin-top: 6px;
+    margin-left: 35px;
+    width: 6px;
+    height: 6px;
+}
+
 .horizon{
     position: absolute;
     width: 50%;
@@ -254,6 +373,43 @@ body{
     z-index: 100;
     left: 10px;
     border-radius: 10px;
+}
+
+.ani-xs{
+    animation: move-xs 50s infinite;
+}
+.ani-s{
+    animation: move-xs 40s infinite;
+}
+.ani-ns{
+    animation: move-s 30s infinite;
+}
+.ani-n{
+    animation: move-n 20s infinite;
+}
+.ani-f{
+    animation: move-f 15s infinite;
+}
+.ani-xf{
+    animation: move-f 10s infinite;
+}
+@keyframes move-xs{
+    0%{transform: translateX(500px) scale(0.4);}
+    100%{transform: translateX(-500px) scale(0.4);}
+}
+
+@keyframes move-s{
+    0%{transform: translateX(500px) scale(0.6);}
+    100%{transform: translateX(-500px) scale(0.6);}
+}
+@keyframes move-n{
+    0%{transform: translateX(500px) scale(0.8);}
+    100%{transform: translateX(-500px) scale(0.8);}
+}
+
+@keyframes move-f{
+    0%{transform: translateX(500px) scale(1);}
+    100%{transform: translateX(-500px) scale(1);}
 }
 
 body .black{
@@ -273,6 +429,9 @@ body .scale-s{
 }
 body .scale-m{
     transform: scale(.6);
+}
+body .scale-l{
+    transform: scale(.8);
 }
 .mr-minus-1{
     margin-left: -10px;
