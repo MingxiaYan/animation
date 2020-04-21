@@ -115,7 +115,7 @@ body{
     border-radius: 100px;
     width: 80px;
     height: 80px;
-    z-index: 2;
+    z-index: 1;
     top: 30px;
     left: 10%;
 }
@@ -126,17 +126,11 @@ body{
     height: 100px;
     border-radius: 10px 10px 10px 10px; 
 }
-.mountain div{
-    position: absolute;
-}
-.mount-left{}
-.mount-right{}
-.mount-snow{}
 
 .house{
     font-size: 0;
     position: absolute;
-    z-index: 2;
+    z-index: 5;
     width: 150px;
     min-height: 100px;
     border-radius: 10px 10px 10px 10px;
@@ -248,7 +242,7 @@ body{
 
 .kite{
     position: absolute;
-    z-index: 1;
+    z-index: 3;
     top: 0;
     left: 260px;
     animation: kite-ani 10s infinite forwards;
@@ -388,10 +382,9 @@ body{
     animation: move-n 20s infinite;
 }
 .ani-f{
+    position: relative;
     animation: move-f 15s infinite;
-}
-.ani-xf{
-    animation: move-f 10s infinite;
+    z-index: 2;
 }
 @keyframes move-xs{
     0%{transform: translateX(500px) scale(0.4);}
@@ -447,4 +440,8 @@ body .scale-l{
 }
 .mr-minus-5{
     margin-left: -50px;
+}
+
+.white{
+    color: #FFFFFF;
 }
