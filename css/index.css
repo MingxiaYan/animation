@@ -135,11 +135,12 @@ body{
 
 .house{
     font-size: 0;
-    position: relative;
-    background: #FFFFFF;
+    position: absolute;
     width: 150px;
     min-height: 100px;
-    border-radius: 10px 10px 10px 10px; 
+    border-radius: 10px 10px 10px 10px;
+    top: -17px;
+    left: 320px;
 }
 .house .roof{
     background: linear-gradient(90deg,transparent 20%,#b87a61 20%,#b87a61 70%,transparent 70%);
@@ -179,14 +180,13 @@ body{
     left: 30px;
 }
 .wall{
-    background: linear-gradient(45deg,#f7866a,#df5836);
+    background: linear-gradient(45deg,#e47a69,#e25b46);
     min-height: 150px;
     width: calc( 100% - 20px);
     margin-left: 10px;
 }
 .wall .floor{
     height: 50px;
-    background: rgb(15, 71, 106,0.3);
     border-bottom: 3px solid rgb(216, 212, 170);
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.247);
 }
@@ -199,18 +199,50 @@ body{
     margin-top: 8px;
     box-shadow: inset 1px -1px 3px rgba(255, 255, 255, 0.377), inset 1px -0.5px 1px rgba(255, 255, 255, 0.7), inset -2px 0.5px 1px rgba(0, 0, 0, .6);
 }
+.floor.first{
+    height: 55px;
+}
+.floor.first .window{
+    display: inline-block;
+    height: 16px;
+    width: 29px;
+    background: #074168;
+    margin-left: 8px;
+    margin-top: 22px;
+    box-shadow: inset 2px 1px 0px rgba(255, 255, 255, 1), inset -2px 2px 1px rgba(255, 255, 255, 0.7), inset -1px -1.5px 0px rgba(255,255,255,1);
+}
 .floor .door{
     display: inline-block;
-    height: 33px;
+    height: 30px;
     width: 23px;
     background: #074168;
     margin-left: 13px;
     margin-bottom: -14px;
     box-shadow: inset 2px 1px 0px rgba(255, 255, 255, 1), inset -2px 2px 1px rgba(255, 255, 255, 0.7), inset -2px 0.5px 1px rgba(0, 0, 0, .6);
 }
-.floor .door::before{
-    
-    background: linear-gradient(90deg,#FFFFFF 5%,#c05711 5%);
+.floor.first::before{
+    content: "";
+    position: absolute;
+    height: 23px;
+    width: calc( 100% - 20px);
+    bottom: 41px;
+    background: 
+    linear-gradient(#DDD 10%,transparent 10%),
+    linear-gradient(90deg,transparent 3%,#855944 3%,#855944 6%,transparent 6%,
+    transparent 12%,#855944 12%,#855944 16%,transparent 16%,
+    transparent 20%,#855944 20%,#855944 23%,transparent 23%,
+    transparent 27%,#855944 27%,#855944 31%,transparent 31%,
+    transparent 35%,#855944 35%,#855944 39%,transparent 39%,
+    transparent 43%,#855944 43%,#855944 46.5%,transparent 46.5%,
+    transparent 50%,#855944 50%,#855944 54%,transparent 54%,
+    transparent 58%,#855944 58%,#855944 61.5%,transparent 61.5%,
+    transparent 65%,#855944 65%,#855944 69%,transparent 69%,
+    transparent 73%,#855944 73%,#855944 77%,transparent 77%,
+    transparent 82%,#855944 82%,#855944 85%,transparent 85%,
+    transparent 89%,#855944 89%,#855944 91%,transparent 91%,
+    transparent 95%,#855944 95%,#855944 98%,transparent 98%
+    ),
+    linear-gradient(#fff,#c7c3bd);
 }
 
 .horizon{
