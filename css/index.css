@@ -1,5 +1,6 @@
 body{
     background: rgb(0, 34, 44);
+    /* background: rgb(255, 254, 254); */
 }
 
 .container{
@@ -26,8 +27,10 @@ body{
 .smile-col li{
     display: inline-block;
     background: rgb(255, 217, 0);
-    width: 10px;
-    height: 10px;
+    width: 11px;
+    height: 11px;
+    margin-top: -1px;
+    margin-left: -1px;
 }
 
 /* Mountain draw */
@@ -404,6 +407,122 @@ body{
     0%{transform: translateX(500px) scale(1);}
     100%{transform: translateX(-500px) scale(1);}
 }
+
+/* third */
+.draw-three{
+    position: relative;
+    height: 500px;
+    background: #150b16;
+}
+.draw-three img{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    opacity: 0.1;
+}
+.pearl-girl{
+    position: relative;
+    height: 500px;
+    width: 100%;
+}
+.pearl-girl img{
+    position: absolute;
+    max-height: 100%;
+    top: 0;
+    right: 0;
+    opacity: 0.3;
+}
+.pearl-girl div{
+    position: absolute;
+}
+.skin{
+    right: 0;
+}
+.skin div{
+}
+.skin .skin-1{
+    background: #ffe3ca;
+    width: 235px;
+    height: 305px;
+    right: 0;
+}
+.skin .skin-2{
+    background: #ffe3ca;
+    width: 50px;
+    right: 217px;
+    height: 44px;
+    border-radius: 23px 0 0 20px;
+}
+.skin .skin-3{
+    background: #ffe3ca;
+    width: 84px;
+    right: 179px;
+    top: 54px;
+    height: 167px;
+    border-radius: 98px 0 0px 148px;
+}
+.skin .skin-4{
+    background: #ffe3ca;
+    width: 113px;
+    right: 153px;
+    top: 51px;
+    height: 201px;
+    border-radius: 98px 0 0px 148px;
+}
+.skin .skin-5{
+    background: #ffe3ca;
+    width: 113px;
+    right: 153px;
+    top: 51px;
+    height: 201px;
+    border-radius: 98px 0 0px 148px;
+}
+
+.draw-four{
+    /* background: #150b16; */
+    position: relative;
+}
+.draw-four .me{
+    position: relative;
+    font-family: 'Rationale', sans-serif;
+    text-align: right;
+    color: transparent;
+    font-weight: 500;
+    font-size: 45px;
+    letter-spacing: 5px;
+    text-shadow: 0px 0px 10px #e64514;
+    line-height: 60px;
+    vertical-align: middle;
+}
+.draw-four .me::before{
+    content: "Mingxia Yan";
+    position: absolute;
+    width: auto;
+    white-space: nowrap;
+    font-size: 33px;
+    letter-spacing: 10px;
+    line-height: 60px;
+    color: #e6a038;
+    color: linear-gradient(#111,#eee);
+    text-shadow: .5px -.5px 3px #fdf5e8;
+    margin-left: 2px;
+    vertical-align: middle;
+}
+.draw-four .me::after{
+    content: "Mingxia Yan";
+    position: absolute;
+    white-space: nowrap;
+    right: -5px;
+    font-size: 33px;
+    letter-spacing: 10px;
+    line-height: 60px;
+    color: #e6a038;
+    text-shadow: -1px 1px 2px #a56d19;
+    margin-left: 2px;
+    vertical-align: middle;
+}
+.draw-four .line{}
 
 body .black{
     background: black;

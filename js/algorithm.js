@@ -45,9 +45,8 @@ Array.prototype.getMin = function(){
     return min;
 }
 
-// var qq = new Array();
-var ss = [1,0,0,50,-12];
-console.log(ss.reversee());
-console.log(ss);
-// console.log(qq);
+// // var qq = new Array();
+// var ss = [1,0,0,50,-12];
+// console.log(ss.reversee());
+// console.log(ss);
 

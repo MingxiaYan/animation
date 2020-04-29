@@ -1,5 +1,6 @@
-
-let str = "file:///C:/chain/asset";
-let ss = str.split(":").pop();
-console.log(str.split(":"))
-console.log(ss)
+var aa = 20;
+(function aa(){
+    aa = 10;
+    console.log(aa)
+    console.log(window.aa)
+})()
