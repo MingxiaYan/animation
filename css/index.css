@@ -501,6 +501,7 @@ body{
     width: auto;
     white-space: nowrap;
     font-size: 33px;
+    font-weight: 100;
     letter-spacing: 10px;
     line-height: 60px;
     color: #e6a038;
@@ -508,6 +509,8 @@ body{
     text-shadow: .5px -.5px 3px #fdf5e8;
     margin-left: 2px;
     vertical-align: middle;
+    -webkit-text-stroke: 3px;
+    -webkit-text-stroke-color: #fcc97e;
 }
 .draw-four .me::after{
     content: "Mingxia Yan";

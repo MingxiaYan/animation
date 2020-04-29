@@ -8,6 +8,8 @@
         <link href="https://fonts.font.im/css?family=Bungee+Inline|Poiret+One|Rationale" rel="stylesheet">
         <link href="https://fonts.font.im/css?family=Bungee+Inline|Rationale|Varela+Round" rel="stylesheet">
         <link href="./css/index.css" rel="stylesheet">
+		<script src="/lib/jquery/jquery.min.js"></script>
+		<script src="/lib/animate.css/animate.min.js"></script>
     </head>
     <body>
         <div class="container">
@@ -457,7 +459,7 @@
                     <div class="horizon"></div>
                 </div>
             </div>
-            <div class="draw-three mt-3">
+            <!-- <div class="draw-three mt-3">
                 
                 <img style="right: auto;opacity: 1;" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1587893281973&di=8e8221bc81572b3fcf1b105c51dc6ff7&imgtype=0&src=http%3A%2F%2Fqiniuimg.qingmang.mobi%2Fimage%2Forion%2F1e67d60e7542819aeb385024147cdc16_564_770.jpeg">
                 <div class="pearl-girl">
@@ -473,11 +475,44 @@
                     </div>
                     
                 </div>
-            </div>
-            <div class="draw-four mt-3">
-                <H1 class="me">Mingxia Yan</H1>
-                <div class="line"></div>
-            </div>
+            </div> -->
+        <div class="draw-four mt-3">
+            <H1 class="me">Mingxia Yan</H1>
+        </div>
+            
+		<svg width="100%" height="300" version="1.1" xmlns="http://www.w3.org/2000/svg">
+			<polygon points="220,100 300,210 170,250 170,250" style="fill:#fae672;stroke:#fae672;stroke-width:1"/>
+		</svg>
+
+		<script>
+            var data = [{
+                points:"220,100 300,210 140,250 100,300"},{
+                points:"150,100 300,150 350,250 150,250"},{
+                points:"220,100 300,210 170,250 200,300"},{
+                points:"150,100 300,100 300,250 150,250"},{
+            }];
+
+            var index = 0,count = data.length;
+            function animate() {
+                index++;
+                if(index>=4) index=0;
+                anime({
+                    targets: "polygon",
+                    points: {
+                        value: data[index].points,
+                        duration: 1000
+                    },
+                    elasticity: 100
+                });
+            }
+
+            function start() {
+                setInterval(() => {animate();}, 1000);
+            }
+
+            start();
+            </script>
+
         </div>
     </body>
 </html>
